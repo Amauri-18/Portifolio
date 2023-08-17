@@ -1,0 +1,84 @@
+
+REQUISICAO HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+    ${Endereco} / ${Path = caminho de identificação do recurso}.
+
+IP: https://pokeapi.co
+Path: /api/v2/pokemon
+
+Request Method: Get | Post | Put | Delete | Patch
+
+? o que está a frente do "?" é a carry string
+?type=grass&name=i
+?
+type = grass
+name = i
+
+Request Headers
+    Content-type: application/json
+    configuração
+    t-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Response Headers
+    configuração
+
+BODY ->Corpo da requisicao
+{
+    "name": "Teste"
+}
+
+Resposta do servidor
+STATUS CODE: 200 ->ok
+
+-------------------------------------------------------------------------------
+
+// fetch nos retorna uma promisse
+fetch(url)
+    
+    //.then(function (response) {
+    //    return response.json();
+    //})
+    //.then(function (jsonBody) {
+        console.log(jsonBody);
+    //})
+
+    //.catch(function (error){
+    //    console.log(error);
+    //})
+    //.finally(function () {
+    //    console.log('Requisição Concluída');
+    //})
+
+-------------------------------------------------------------------------------
+
+Para Consultar a politica de Execução:
+    get-executionPolicy
+
+Para Alterar a política para Restricted:
+    set-executionpolicy Restricted
+
+Para Alterar a política para RemoteSigned:
+    set-executionpolicy RemoteSigned
+
+Para Alterar a política para Unrestricted:
+    set-executionpolicy Unrestricted
+
+TIPOS DE PERMISSÕES
+
+Restricted
+Não carrega nem executa arquivos de configuração e/ou scripts do Powershell.
+
+AllSigned
+Só executa scripts e arquivos de configuração assinados por um fornecedor confiável, mesmo que o script tenha sido escrito por você mesmo (local).
+
+RemoteSigned
+É basicamente o mesmo que o acima, porém permite a execução de arquivos de configuração e/ou scripts locais.
+
+Unrestricted
+Carrega e executa todos os arquivos de configuração e scripts PowerShell. Pode ser pedida uma confirmação para executar scripts não assinados.
+
+Bypass
+Não há nenhuma restrição.
+
+Undefined
+Remove a política de execução atual. A não ser que ela esteja definida numa diretiva de grupo.
