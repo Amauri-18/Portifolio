@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;   
+}
+
+body {     
+    margin: auto;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+header {    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: #122A57;
+    color: #fff;
+    height: 80px; 
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100vw;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: rgba(128, 128, 128, 0.25);
+    border: 2px solid rgba(128, 128, 128, 1);
+    padding: 10px;
+    border-radius: 10px;
+    width: 450px;
+}
+
+#send {
+    font-size: 18px;
+    color: #fff;
+    background-color: gray;
+    font-weight: 700;
+}
+
+input, button {
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px;
+    margin: 6px;
+}
+
+button {
+    text-decoration: none;
+    border: 2px solid rgba(128, 128, 128, 1);
+    background-color: rgba(128, 128, 128, 0.25);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 120px
+}
+
+.delete {
+    background-color: rgba(231, 54, 54, 0.5);
+    border: solid 2px rgb(231, 54, 54);
+    color: rgb(231, 54, 54);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 75px;
+}
+
+.delete:hover {
+    background-color: rgba(231, 54, 54, 0.75);
+    color: #fff;    
+}
+
+
+.container {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+}
+
+table {    
+    /*margin-top: 10px;*/
+    margin: 10px;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th, td {   
+    padding: 5px;
+    text-align: left; 
+    border-bottom: 1px solid #ddd;
+}
+
+/*Media Queries*/
+
+@media (max-width: 650px) {
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        width: 100%;     
+    }
+
+    .flex-container {
+        width: 300px;        
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+}
