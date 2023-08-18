@@ -14,23 +14,31 @@
             </div>
 
             <div class="box">
-                <div class="container-login">
+                <form class="container-login">
                     <label class="acesso">Acesso ao Webmail</label>
-                    <div class="grp-email">
-                        <span>e-mail</span>
+                    
+                    <div class="grp-cred">
+                        <div class="grp-login">
+                            <span>e-mail</span>                        
+                        </div>
                         <input class="email" type="text">
                     </div>
-                    <div class="grp-email">
-                        <span>senha</span>
-                        <input class="password" type="password">
+
+                    <div class="grp-cred">
+                        <div class="grp-login">
+                            <span>senha</span>
+                            <a href="#" id="show-pass">exibir</a>                        
+                        </div>
+                        <input type="password" class="password" id="password">
                     </div>
-                    <div class="group">                        
+
+                    <div class="group">                       
                         <input class="check-box" type="checkbox">
                         <label class="stay-connected">Ficar conectado</label>
                         <a href="" class="forgot-password">Esqueceu a senha?</a>
                     </div>
-                    <button type="submit">ENTRAR</button>
-                </div>
+                    <button type="submit" onclick="acessar()">ENTRAR</button>
+                </form>
 
                 <div class="container-warning">
                     <p class="p1">Atenção:</p>
@@ -44,7 +52,10 @@
 
     <footer>     
         <img src="./img/recaptcha.png" alt="recaptcha">      
-    </footer>
+    </footer> 
+    
+    <script src="./main.js"></script>
+    
 </body>  
 </html>
 

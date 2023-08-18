@@ -22,8 +22,6 @@ section {
     justify-content: center;
     align-items: center;
     position: absolute;
-
-    /*margin-top: 100px;   */ 
 }
 
 .container {
@@ -50,57 +48,67 @@ section {
     flex-direction: column;
     width: 300px;
     height: 356px;
-    background: #fff;    
+    background-color: #fff;    
 }
 
 .container-login .acesso {
-    background-color: #fff;
     color: #182430;
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: bold;        
 } 
 
-.container-login .grp-email {
-    display: block;
-    width: 80%;    
+.container-login .grp-cred {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #fff;
+    width: 80%;
+}
+
+.container-login .grp-login {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;    
+}
+
+#show-pass {
+    background-color: #fff;
+    color: #a4a4a4;
+    font-size: 14px;
 }
 
 .container-login span {
     color: #a4a4a4;
-    background-color: #fff;  
     width: 100px;
 }
 
-.container-login .email {
-    background-color: #fff;
+.container-login .email, .password {    
     border: none;
     border-bottom: 2px solid #b7b7b7;
     color: #a4a4a4;
     font-size: 1rem;
-    width: 100%;
-}
-
-.container-login .password {
-    background-color: #fff;
-    border: none;
-    border-bottom: 2px solid #b7b7b7;
-    color: #a4a4a4;
-    font-size: 1rem;
-    width: 100%;
+    width: 100%;       
 }
 
 .container-login .stay-connected {
-    color: #182430;
-    background: #fff;
+    color: #182430;    
     font-size: 14px;
 }
 
 .container-login .forgot-password {
-    background-color: #fff;
     color:#00Acc8;
-    font-size: 14px;
-    
+    font-size: 14px;    
+}
+
+.container-login .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.container-login .acesso, .grp-login, .email, .password, .stay-connected, .forgot-password, span, .group {
+    background-color: #fff;
 }
 
 .container-login button {
@@ -117,13 +125,6 @@ section {
 
 .container-login button:hover {
     background-color: #ed234fd2;
-}
-.container .group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #fff;
-    width: 85%;    
 }
 
 .container-warning {
@@ -176,6 +177,19 @@ footer {
 footer img {   
     border-radius: 5px;    
     height: 65px;
-    width: 75px;
-   
+    width: 75px;   
+}
+
+/* Media Queries */
+
+
+@media (max-device-width: 650px) {
+    .box {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .container-login {
+        width: 320px;
+    }
 }
