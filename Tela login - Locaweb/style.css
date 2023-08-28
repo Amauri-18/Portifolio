@@ -51,10 +51,12 @@ section {
     background-color: #fff;    
 }
 
-.container-login .acesso {
+.container-login legend {
     color: #182430;
     font-size: 1.2rem;
-    font-weight: bold;        
+    font-weight: bold;    
+    text-align: center;   
+    width: 80%;
 } 
 
 .container-login .grp-cred {
@@ -77,41 +79,40 @@ section {
     font-size: 14px;
 }
 
-.container-login span {
+.container-login label {
     color: #a4a4a4;
-    width: 100px;
 }
 
 .container-login .email, .password {    
     border: none;
     border-bottom: 2px solid #b7b7b7;
+    margin-bottom: 20px;
     color: #a4a4a4;
     font-size: 1rem;
     width: 100%;       
 }
 
-.container-login .stay-connected {
+.container-login .group {
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+}
+
+.container-login .keep-me-logged {
     color: #182430;    
     font-size: 14px;
 }
 
 .container-login .forgot-password {
     color:#00Acc8;
-    font-size: 14px;    
+    font-size: 13px;    
 }
 
-.container-login .group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-}
-
-.container-login .acesso, .grp-login, .email, .password, .stay-connected, .forgot-password, span, .group {
+.container-login legend, .grp-login, .email, .password, .keep-me-logged, .forgot-password, label, .group {
     background-color: #fff;
 }
 
-.container-login button {
+.container-login .button {
     background-color: #ed2350;
     color: #fff;
     border: none;
@@ -123,7 +124,7 @@ section {
     cursor: pointer;
 }
 
-.container-login button:hover {
+.container-login .button:hover {
     background-color: #ed234fd2;
 }
 

@@ -1,6 +1,12 @@
 
 const frmMostrar = window.document.querySelector('#show-pass');
 const frmPass = window.document.querySelector('#password');
+const frmButton = window.document.querySelector('.button');
+
+frmButton.addEventListener('click', (e) =>  {
+    e.preventDefault();
+})
+
 frmMostrar.addEventListener('click', () => {
     
     const valor = frmMostrar.textContent
@@ -14,8 +20,5 @@ frmMostrar.addEventListener('click', () => {
     }
 })
 
-function acessar() {
-    console.log('clicou');
-}
 
 

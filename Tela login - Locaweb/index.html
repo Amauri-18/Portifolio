@@ -14,30 +14,30 @@
             </div>
 
             <div class="box">
-                <form class="container-login">
-                    <label class="acesso">Acesso ao Webmail</label>
-                    
+                <form class="container-login">                
+                    <legend>Acesso ao Webmail</legend>    
+                
                     <div class="grp-cred">
                         <div class="grp-login">
-                            <span>e-mail</span>                        
+                            <label for="email">e-mail</label>                
                         </div>
-                        <input class="email" type="text">
-                    </div>
-
-                    <div class="grp-cred">
+                        <input type="text" id="email" class="email" required autocomplete="off">      
+               
                         <div class="grp-login">
-                            <span>senha</span>
-                            <a href="#" id="show-pass">exibir</a>                        
+                            <label for="password">senha</label>
+                            <a href="#" id="show-pass">exibir</a>                      
                         </div>
-                        <input type="password" class="password" id="password">
+                        <input type="password" id="password" class="password" autocomplete="off">
                     </div>
 
-                    <div class="group">                       
-                        <input class="check-box" type="checkbox">
-                        <label class="stay-connected">Ficar conectado</label>
-                        <a href="" class="forgot-password">Esqueceu a senha?</a>
+                    <div class="group">
+                        <label for="keep-me-logged" class="keep-me-logged">
+                            <input id="keep-me-logged" class="check-box" type="checkbox">
+                            Ficar conectado
+                        </label>
+                        <a href="#" class="forgot-password">Esqueceu a senha?</a>
                     </div>
-                    <button type="submit" onclick="acessar()">ENTRAR</button>
+                    <input type="submit" value="ENTRAR" class="button">
                 </form>
 
                 <div class="container-warning">
@@ -54,8 +54,7 @@
         <img src="./img/recaptcha.png" alt="recaptcha">      
     </footer> 
     
-    <script src="./main.js"></script>
-    
+    <script src="./main.js"></script>    
 </body>  
 </html>
 
