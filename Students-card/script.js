@@ -6,7 +6,6 @@ class Student {
     image;
 }
 
-
 function getUser(id) {
     return fetch(`https://reqres.in/api/users?id=${id}`)
         .then((response) => response.json())
@@ -41,20 +40,27 @@ function render(user) {
     card.classList.add("card")   
 
     const cardData = `      
-        <div class="logo">
-            <img src="./img/vs-code.svg" alt="logo">    
-        </div>               
-        
-        <div class="perfil">
-            <img src="${student.image}" alt="perfil">
-            <p>ID: ${student.id}</p>
+
+        <div class="row">
+            <div class="col-2">
+                <div class="logo">
+                    <img src="./img/vs-code.svg" alt="logo">    
+                </div>               
+            </div> 
+
+            <div class="col-2">
+                <div class="perfil">
+                    <img src="${student.image}" alt="perfil">
+                    <p>ID: ${student.id}</p>
+                </div>
+            </div>
         </div>
 
         <div class="info">
             <p class="data">05/2022</p>
             <p class="nome">${student.firstName} ${student.lastName}</p>
             <p class="email">${student.email}</p>
-        </div>
+        </div>        
     ` // end
 
     card.innerHTML = cardData;
